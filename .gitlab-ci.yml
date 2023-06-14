@@ -6,7 +6,7 @@ stages:
   - build
 
 maven-build:
-  image: openjdk:20
+  image: maven:latest
   stage: build
   script: "mvn clean package -B"
   artifacts:
