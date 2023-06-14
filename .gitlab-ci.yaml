@@ -1,0 +1,10 @@
+stages:
+  - build
+
+maven-build:
+  image: maven:3-jdk-20
+  stage: build
+  script: "mvn clean package -B"
+  artifacts:
+    paths:
+      - target/vcharugin-0.0.1-SNAPSHOT.jar

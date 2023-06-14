@@ -1,0 +1,40 @@
+syntax = "proto3";
+option java_multiple_files = true;
+package org.rosatom.vcharugin;
+
+message ModelRequest {
+    string id = 1;
+    string name = 2;
+    string comment = 3;
+}
+
+message ModelResponse {
+    string id = 1;
+    string name = 2;
+    string comment = 3;
+    string createAt = 4;
+    string updateAt = 5;
+    string creator = 6;
+    string updater = 7;
+}
+
+message ModelListResponse {
+    repeated ModelResponse modelListResponse = 1;
+}
+
+enum ModelErrorCode {
+    MODEL_NOT_FOUND = 0;
+    INVALID_NAME = 1;
+    INVALID_COMMENT = 2;
+}
+
+message ModelExceptionResponse {
+    ModelErrorCode error_code = 1;
+}
+
+service ModelService {
+    rpc CreateModel (ModelRequest) returns (ModelResponse) {};
+    rpc ReadModel (ModelRequest) returns (ModelResponse) {};
+    rpc UpdateModel (ModelRequest) returns (ModelResponse) {};
+    rpc DeleteModel (ModelRequest) returns (stream ModelResponse) {};
+}
