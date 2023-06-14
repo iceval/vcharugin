@@ -8,3 +8,4 @@ maven-build:
   artifacts:
     paths:
       - target/vcharugin-0.0.1-SNAPSHOT.jar
+      
