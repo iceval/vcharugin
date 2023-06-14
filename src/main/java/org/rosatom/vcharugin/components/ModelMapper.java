@@ -1,7 +1,6 @@
 package org.rosatom.vcharugin.components;
 
-import org.rosatom.vcharugin.ModelRequest;
-import org.rosatom.vcharugin.ModelResponse;
+import org.rosatom.vcharugin.*;
 import org.rosatom.vcharugin.models.Model;
 
 import java.text.Format;

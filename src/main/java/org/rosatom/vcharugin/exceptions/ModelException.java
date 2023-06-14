@@ -1,7 +1,7 @@
 package org.rosatom.vcharugin.exceptions;
 
 import lombok.Getter;
-import org.rosatom.vcharugin.ModelErrorCode;
+import org.rosatom.vcharugin.*;
 
 @Getter
 public class ModelException extends RuntimeException {
